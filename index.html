@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="title" content="JSON Obfuscator">
+	<meta name="description" content="A simple JSON obfuscator used to hide your code from thieves">
+	<meta name="author" content="Mokusei, Gabriel Aplok">
+	<link rel="icon" href="assets/images/favicon.ico">
+	<title>JSON Obfuscator</title>
+
+	<!-- Bootstrap core CSS -->
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+	<div class="col-lg-8 mx-auto p-3 py-md-5">
+
+		<header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+			<a href="https://mokuseidev.github.io/json-obfuscator/" class="d-flex align-items-center text-dark text-decoration-none">
+				<span class="fs-4">JSON Obfuscator</span>
+			</a>
+		</header>
+
+		<main>
+			<div class="form-group">
+				<h5 class="text-dark" for="input">Your JSON Code here:</h5>
+				<code>
+					<textarea class="form-control" id="input" spellcheck="false" rows="10" oninput="validateObfuscate();" placeholder="{}"></textarea>
+				</code>
+			</div>
+			<br />
+			<center>
+				<button type="button" id="obfuscate" class="btn btn-primary">Obfuscate</button>
+			</center>
+			<br />
+			<div class="alert alert-success" id="successfully-obfuscated" role="alert">
+				Your json has been successfully obfuscated!
+			</div>
+			<div class="alert alert-danger" id="failure-obfuscate" role="alert">
+				Unable to obfuscate your json
+			</div>
+			<br />
+			<br />
+
+			<div class="form-group">
+				<h5 class="text-dark" for="output">Obfuscated JSON Code:</h5>
+				<code>
+					<textarea class="form-control" id="output" readonly spellcheck="false" rows="10"></textarea>
+				</code>
+			</div>
+			<br />
+			<center>
+				<button type="button" id="copyToClipboard" class="btn btn-secondary">Copy to Clipboard</button>
+				<button type="button" id="downloadFile" class="btn btn-secondary">Download File</button>
+			</center>
+
+		</main>
+
+		<footer class="pt-5 my-5 text-muted border-top">
+			<span class="site-footer-owner">Created by <a href="https://twitter.com/MokuseiDev">Mokusei</a>│<a href="https://twitter.com/GabrielAplok">Gabriel Aplok</a>.</span>
+		</br>
+		<span class="site-footer-credits">This site is not affiliated with Mojang Studios.</span>
+	</footer>
+</div>
+
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/FileSaver.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
